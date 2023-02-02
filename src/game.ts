@@ -130,7 +130,7 @@ export class App {
         this.physicsWorld.addBody(body);
 
         const loader = new GLTFLoader();
-        const model = await loader.loadAsync("/gltf/HAZMAT.gltf");
+        const model = await loader.loadAsync(import.meta.env.BASE_URL + "/gltf/HAZMAT.gltf");
         
         model.scene.scale.set(0.05, 0.05, 0.05);
         model.scene.position.set(15, 10, 8);

@@ -15,9 +15,9 @@ export let floorTexture: Texture;
 export let wallTexture: Texture;
 
 export const preInit = async () => {
-    floorTexture = await loader.loadAsync("/textures/backrooms_floor_tex.png");
+    floorTexture = await loader.loadAsync(import.meta.env.BASE_URL + "/textures/backrooms_floor_tex.png");
 
-    wallTexture = await loader.loadAsync("/textures/backrooms_wall_tex.png");
+    wallTexture = await loader.loadAsync(import.meta.env.BASE_URL + "/textures/backrooms_wall_tex.png");
 
     floorTexture.wrapS = wallTexture.wrapS = RepeatWrapping;
     floorTexture.wrapT = wallTexture.wrapT = RepeatWrapping;
