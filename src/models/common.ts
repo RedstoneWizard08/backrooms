@@ -3,6 +3,7 @@ import {
     Mesh,
     MeshStandardMaterial,
     RepeatWrapping,
+    Texture,
     TextureLoader,
 } from "three";
 
@@ -10,15 +11,18 @@ import { Body, Box, World, Vec3 } from "cannon-es";
 
 export const loader = new TextureLoader();
 
-export const floorTexture = await loader.loadAsync(
-    "/textures/backrooms_floor_tex.png"
-);
+export let floorTexture: Texture;
+export let wallTexture: Texture;
 
-export const wallTexture = await loader.loadAsync("/textures/backrooms_wall_tex.png");
+export const preInit = async () => {
+    floorTexture = await loader.loadAsync("/textures/backrooms_floor_tex.png");
 
-floorTexture.wrapS = wallTexture.wrapS = RepeatWrapping;
-floorTexture.wrapT = wallTexture.wrapT = RepeatWrapping;
-floorTexture.repeat = wallTexture.repeat.set(6, 6);
+    wallTexture = await loader.loadAsync("/textures/backrooms_wall_tex.png");
+
+    floorTexture.wrapS = wallTexture.wrapS = RepeatWrapping;
+    floorTexture.wrapT = wallTexture.wrapT = RepeatWrapping;
+    floorTexture.repeat = wallTexture.repeat.set(6, 6);
+};
 
 export const createFloor = async (world: World) => {
     const geometry = new BoxGeometry(16, 1, 16, 1, 1, 1);

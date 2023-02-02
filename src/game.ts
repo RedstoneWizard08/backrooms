@@ -20,6 +20,7 @@ import { PointerLockControlsCannon } from "./controls";
 import { BoxManager } from "./BoxManager";
 import { World, Body, Box, Vec3 } from "cannon-es";
 import CannonDebugger from "cannon-es-debugger";
+import { preInit } from "./models/common";
 
 export const doSetWireframes = (scene: Object3D) => {
     for (const child of scene.children) {
@@ -65,6 +66,8 @@ export class App {
     }
 
     public async run() {
+        await preInit();
+
         this.renderer = new WebGLRenderer();
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
