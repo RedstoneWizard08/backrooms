@@ -1,4 +1,4 @@
-# Enter the Backrooms
+# The Backrooms
 
 A liminal horror game based on the popular creepypasta, the Backrooms.
 

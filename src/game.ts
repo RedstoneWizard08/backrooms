@@ -65,6 +65,23 @@ export class App {
         this.lastCallTime = 0;
     }
 
+    public startUI() {
+        const canvas = document.createElement("canvas");
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.className = "ui-canvas";
+
+        document.body.appendChild(canvas);
+
+        const ctx = canvas.getContext("2d")!;
+        const commit = import.meta.env.VITE_COMMIT_HASH;
+
+        ctx.fillStyle = "white";
+        ctx.font = "12pt Arial";
+        ctx.fillText(`The Backrooms Pre-Alpha Build | Rev. ${commit}`, 15, 30);
+    }
+
     public async run() {
         await preInit();
 
@@ -74,6 +91,8 @@ export class App {
         this.renderer.outputEncoding = sRGBEncoding;
 
         document.body.appendChild(this.renderer.domElement);
+
+        this.startUI();
 
         this.scene = new Scene();
 
@@ -97,6 +116,8 @@ export class App {
         this.gui.add(this.camera.rotation, "x").listen();
         this.gui.add(this.camera.rotation, "y").listen();
         this.gui.add(this.camera.rotation, "z").listen();
+
+        this.gui.hide();
 
         const body = new Body({
             mass: 5,
