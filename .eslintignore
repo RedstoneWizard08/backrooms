@@ -1,0 +1,14 @@
+.git
+*.md
+dist
+build
+node_modules
+
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+LICENSE
+
+*.gltf
+*.bbmodel
+*.png
