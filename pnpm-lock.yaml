@@ -1,13 +1,24 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@babylonjs/core': ^5.45.0
+  '@babylonjs/gui': ^5.45.0
+  '@babylonjs/gui-editor': ^5.45.0
+  '@babylonjs/inspector': ^5.45.0
+  '@babylonjs/loaders': ^5.45.0
+  '@babylonjs/materials': ^5.45.0
+  '@babylonjs/post-processes': ^5.45.0
+  '@babylonjs/procedural-textures': ^5.45.0
+  '@babylonjs/serializers': ^5.45.0
+  '@types/matter-js': ^0.18.2
   '@types/node': ^18.11.18
-  '@types/three': ^0.149.0
+  '@types/react': ^18.0.27
+  '@types/react-dom': ^18.0.10
   '@typescript-eslint/eslint-plugin': ^5.50.0
   '@typescript-eslint/parser': ^5.50.0
   alea: ^1.0.1
-  cannon-es: ^0.20.0
-  cannon-es-debugger: ^1.0.0
+  ammojs-typed: ^1.0.6
+  babylonjs-gltf2interface: ^5.45.0
   colorette: ^2.0.19
   eruda: ^2.11.2
   eslint: ^8.33.0
@@ -16,23 +27,32 @@ specifiers:
   puppeteer: ^19.6.2
   serve: ^14.2.0
   simplex-noise: ^4.0.1
-  three: ^0.149.0
   ts-node: ^10.9.1
   typescript: ^4.9.5
   vite: ^4.0.0
 
 dependencies:
+  '@babylonjs/core': 5.45.0
+  '@babylonjs/gui': 5.45.0_@babylonjs+core@5.45.0
+  '@babylonjs/gui-editor': 5.45.0_7gafdlo7b26w6quvmpxs45oznm
+  '@babylonjs/inspector': 5.45.0_bdvv6n5ekw72tkd2ahncgqr35m
+  '@babylonjs/loaders': 5.45.0_nzvwrhevxtn73mwd7l54j5xqcm
+  '@babylonjs/materials': 5.45.0_@babylonjs+core@5.45.0
+  '@babylonjs/post-processes': 5.45.0_@babylonjs+core@5.45.0
+  '@babylonjs/procedural-textures': 5.45.0_@babylonjs+core@5.45.0
+  '@babylonjs/serializers': 5.45.0_nzvwrhevxtn73mwd7l54j5xqcm
   alea: 1.0.1
-  cannon-es: 0.20.0
-  cannon-es-debugger: 1.0.0_6mctyoczal5tb3yexqpq3c2dae
+  ammojs-typed: 1.0.6
+  babylonjs-gltf2interface: 5.45.0
   eruda: 2.11.2
   lil-gui: 0.17.0
   simplex-noise: 4.0.1
-  three: 0.149.0
 
 devDependencies:
+  '@types/matter-js': 0.18.2
   '@types/node': 18.11.18
-  '@types/three': 0.149.0
+  '@types/react': 18.0.27
+  '@types/react-dom': 18.0.10
   '@typescript-eslint/eslint-plugin': 5.50.0_go4drrxstycfikanvu45pi4vgq
   '@typescript-eslint/parser': 5.50.0_4vsywjlpuriuw3tl5oq6zy5a64
   colorette: 2.0.19
@@ -66,6 +86,101 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
+
+  /@babylonjs/core/5.45.0:
+    resolution: {integrity: sha512-AXC+0gfEznHhaJHt6cKpX/xWowvnH4Z/kNNgs3DiBf5GzdH4+4ZqN2AfV6l5lXi4v4pV5slbM004xysMGJrXyw==}
+    dev: false
+
+  /@babylonjs/gui-editor/5.45.0_7gafdlo7b26w6quvmpxs45oznm:
+    resolution: {integrity: sha512-kxHgfCM9qVeqNjLPsqGE5IRUQYbQDELDhRdybpzMVAskijEms7NaTXh10vYCVBe57r0QQrgi2I73sZhSoZKIdQ==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+      '@babylonjs/gui': ^5.22.0
+      '@types/react': '>=16.7.3'
+      '@types/react-dom': '>=16.0.9'
+    dependencies:
+      '@babylonjs/core': 5.45.0
+      '@babylonjs/gui': 5.45.0_@babylonjs+core@5.45.0
+      '@types/react': 18.0.27
+      '@types/react-dom': 18.0.10
+    dev: false
+
+  /@babylonjs/gui/5.45.0_@babylonjs+core@5.45.0:
+    resolution: {integrity: sha512-b5V6IbtNiKeh/ghqnznTh2sG+tsbk9sDGwrhWS0oX4n/OZlYk1bgGBD1otMpIXj0Rvj3AIwXTFzf5Zfl4+36cQ==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+    dependencies:
+      '@babylonjs/core': 5.45.0
+    dev: false
+
+  /@babylonjs/inspector/5.45.0_bdvv6n5ekw72tkd2ahncgqr35m:
+    resolution: {integrity: sha512-N3UBjrmdS3yWbnFKtuwAj3OpmM/Ub49t18CyRLTwrv6XjDr+iSdQlSf8RA3h0dvbYqBOWfYpBwpTvSsKG6YlFg==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+      '@babylonjs/gui': ^5.22.0
+      '@babylonjs/gui-editor': ^5.22.0
+      '@babylonjs/loaders': ^5.22.0
+      '@babylonjs/materials': ^5.22.0
+      '@babylonjs/serializers': ^5.22.0
+      '@types/react': '>=16.7.3'
+      '@types/react-dom': '>=16.0.9'
+    dependencies:
+      '@babylonjs/core': 5.45.0
+      '@babylonjs/gui': 5.45.0_@babylonjs+core@5.45.0
+      '@babylonjs/gui-editor': 5.45.0_7gafdlo7b26w6quvmpxs45oznm
+      '@babylonjs/loaders': 5.45.0_nzvwrhevxtn73mwd7l54j5xqcm
+      '@babylonjs/materials': 5.45.0_@babylonjs+core@5.45.0
+      '@babylonjs/serializers': 5.45.0_nzvwrhevxtn73mwd7l54j5xqcm
+      '@fortawesome/fontawesome-svg-core': 6.2.1
+      '@fortawesome/free-regular-svg-icons': 6.2.1
+      '@fortawesome/free-solid-svg-icons': 6.2.1
+      '@types/react': 18.0.27
+      '@types/react-dom': 18.0.10
+    dev: false
+
+  /@babylonjs/loaders/5.45.0_nzvwrhevxtn73mwd7l54j5xqcm:
+    resolution: {integrity: sha512-2xr02eTM/asjnRF/AfMWRqOy/pIx5XLU6DuysJ3/mv2eI333QoKDhvSxINYjxseyb6dNAnXdhEDzrGh8dUs6hA==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+      babylonjs-gltf2interface: ^5.22.0
+    dependencies:
+      '@babylonjs/core': 5.45.0
+      babylonjs-gltf2interface: 5.45.0
+    dev: false
+
+  /@babylonjs/materials/5.45.0_@babylonjs+core@5.45.0:
+    resolution: {integrity: sha512-yMKv8W97wVuaeZf0BIpQy/ZgAP/W7vx7UwfD7pxYrUisE/GURTHYgz8RrHBYHPiQFr9hJZ3DRXIYrbcLEu1JPg==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+    dependencies:
+      '@babylonjs/core': 5.45.0
+    dev: false
+
+  /@babylonjs/post-processes/5.45.0_@babylonjs+core@5.45.0:
+    resolution: {integrity: sha512-QaGM4c+zCxnQ3P9Lbj2bJpE71usGPqBXFo76hdbt71ZUfUlkSPdnEjWn4T86Ev2yHzWVfeBwnNO0WcO4GY03HQ==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+    dependencies:
+      '@babylonjs/core': 5.45.0
+    dev: false
+
+  /@babylonjs/procedural-textures/5.45.0_@babylonjs+core@5.45.0:
+    resolution: {integrity: sha512-Y+IIHDLPSQhQOHqX3Tud9XBkGJh9bL+AJeboqqDmqWbU2DMDPq7ohqF/9mvciN9cAKwBqUSzUT72grB/HyvXhA==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+    dependencies:
+      '@babylonjs/core': 5.45.0
+    dev: false
+
+  /@babylonjs/serializers/5.45.0_nzvwrhevxtn73mwd7l54j5xqcm:
+    resolution: {integrity: sha512-mDc0Zwa3WJ6YsDYZvJrz8AuMFxH5eXTypOQ+lVcsTCkqr0CoUBV0DEo6rZjOFXpAxfT9w+ji1PBSd130PA31Yw==}
+    peerDependencies:
+      '@babylonjs/core': ^5.22.0
+      babylonjs-gltf2interface: ^5.22.0
+    dependencies:
+      '@babylonjs/core': 5.45.0
+      babylonjs-gltf2interface: 5.45.0
+    dev: false
 
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -289,6 +404,36 @@ packages:
       - supports-color
     dev: true
 
+  /@fortawesome/fontawesome-common-types/6.2.1:
+    resolution: {integrity: sha512-Sz07mnQrTekFWLz5BMjOzHl/+NooTdW8F8kDQxjWwbpOJcnoSg4vUDng8d/WR1wOxM0O+CY9Zw0nR054riNYtQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.2.1:
+    resolution: {integrity: sha512-HELwwbCz6C1XEcjzyT1Jugmz2NNklMrSPjZOWMlc+ZsHIVk+XOvOXLGGQtFBwSyqfJDNgRq4xBCwWOaZ/d9DEA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.2.1
+    dev: false
+
+  /@fortawesome/free-regular-svg-icons/6.2.1:
+    resolution: {integrity: sha512-wiqcNDNom75x+pe88FclpKz7aOSqS2lOivZeicMV5KRwOAeypxEYWAK/0v+7r+LrEY30+qzh8r2XDaEHvoLsMA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.2.1
+    dev: false
+
+  /@fortawesome/free-solid-svg-icons/6.2.1:
+    resolution: {integrity: sha512-oKuqrP5jbfEPJWTij4sM+/RvgX+RMFwx3QZCZcK9PrBDgxC35zuc7AOFsyMjMd/PIFPeB2JxyqDr5zs/DZFPPw==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.2.1
+    dev: false
+
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
     engines: {node: '>=10.10.0'}
@@ -366,22 +511,38 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
+  /@types/matter-js/0.18.2:
+    resolution: {integrity: sha512-W9UC9DOPNBRTUocqqPZmzX3cbHmlZBI9jLn6SuxZz0n5QrPk382Ig3hbBWHqYU8TRUmTCJJhuanXeyMTavF7Mg==}
+    dev: true
+
   /@types/node/18.11.18:
     resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
     dev: true
 
+  /@types/prop-types/15.7.5:
+    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react-dom/18.0.10:
+    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
+    dependencies:
+      '@types/react': 18.0.27
+    dev: true
+
+  /@types/react/18.0.27:
+    resolution: {integrity: sha512-3vtRKHgVxu3Jp9t718R9BuzoD4NcQ8YJ5XRzsSKxNDiDonD2MXIT1TmSkenxuCycZJoQT5d2vE8LwWJxBC1gmA==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.1
+    dev: true
+
+  /@types/scheduler/0.16.2:
+    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+    dev: true
+
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
-    dev: true
-
-  /@types/three/0.149.0:
-    resolution: {integrity: sha512-fgNBm9LWc65ER/W0cvoXdC0iMy7Ke9e2CONmEr6Jt8sDSY3sw4DgOubZfmdZ747dkPhbQrgRQAWwDEr2S/7IEg==}
-    dependencies:
-      '@types/webxr': 0.5.1
-    dev: true
-
-  /@types/webxr/0.5.1:
-    resolution: {integrity: sha512-xlFXPfgJR5vIuDefhaHuUM9uUgvPaXB6GKdXy2gdEh8gBWQZ2ul24AJz3foUd8NNKlSTQuWYJpCb1/pL81m1KQ==}
     dev: true
 
   /@types/yauzl/2.10.0:
@@ -584,6 +745,10 @@ packages:
     resolution: {integrity: sha512-QU+wv+ziDXaMxRdsQg/aH7sVfWdhKps5YP97IIwFkHCsbDZA3k87JXoZ5/iuemf4ntytzIWeScrRpae8+lDrXA==}
     dev: false
 
+  /ammojs-typed/1.0.6:
+    resolution: {integrity: sha512-ut/tD0m5eEdlJ5KK97ma6SIEGZ4FN3AJTSVz8wl6C4EtnpVQdP70lOwgDMJKsHjTohxc2/xEZl6yJfMBZNlQ5w==}
+    dev: false
+
   /ansi-align/3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
     dependencies:
@@ -639,6 +804,10 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
     dev: true
+
+  /babylonjs-gltf2interface/5.45.0:
+    resolution: {integrity: sha512-KhWpe/AIpB5/7Plp8jSCugDi3vTN5S4JCeIEWNDb4qG7xgKZmcb7MQG/ejQxnBGumwzCQBU+p0TdhKAFpget4w==}
+    dev: false
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -709,25 +878,6 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
     dev: true
-
-  /cannon-es-debugger/1.0.0_6mctyoczal5tb3yexqpq3c2dae:
-    resolution: {integrity: sha512-sE9lDOBAYFKlh+0w+cvWKwUhJef8HYnUSVPWPL0jD15MAuVRQKno4QYZSGxgOoJkMR3mQqxL4bxys2b3RSWH8g==}
-    peerDependencies:
-      cannon-es: 0.x
-      three: 0.x
-      typescript: '>=3.8'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      cannon-es: 0.20.0
-      three: 0.149.0
-      typescript: 4.9.5
-    dev: false
-
-  /cannon-es/0.20.0:
-    resolution: {integrity: sha512-eZhWTZIkFOnMAJOgfXJa9+b3kVlvG+FX4mdkpePev/w/rP5V8NRquGyEozcjPfEoXUlb+p7d9SUcmDSn14prOA==}
-    dev: false
 
   /chalk-template/0.4.0:
     resolution: {integrity: sha512-/ghrgmhfY8RaSdeo43hNXxpoHAtxdbskUHjPpfqUWGttFgycUhYPGx3YZBCnUCvOa7Doivn1IZec3DEGFoMgLg==}
@@ -861,6 +1011,10 @@ packages:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+    dev: true
+
+  /csstype/3.1.1:
+    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: true
 
   /debug/2.6.9:
@@ -2055,10 +2209,6 @@ packages:
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
-
-  /three/0.149.0:
-    resolution: {integrity: sha512-tohpUxPDht0qExRLDTM8sjRLc5d9STURNrdnK3w9A+V4pxaTBfKWWT/IqtiLfg23Vfc3Z+ImNfvRw1/0CtxrkQ==}
-    dev: false
 
   /through/2.3.8:
     resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==}
