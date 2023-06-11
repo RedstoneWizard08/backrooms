@@ -22,6 +22,8 @@ import { World, Body, Box, Vec3 } from "cannon-es";
 import CannonDebugger from "cannon-es-debugger";
 import { preInit } from "./models/common";
 
+import hazmatUrl from "../public/gltf/HAZMAT.gltf?url";
+
 export const doSetWireframes = (scene: Object3D) => {
     for (const child of scene.children) {
         console.log(`Processing child ${child.name} of type ${child.type}...`);
@@ -61,6 +63,7 @@ export class App {
 
     public constructor() {
         eruda.init();
+
         this.gui = new GUI();
         this.lastCallTime = 0;
     }
@@ -130,7 +133,7 @@ export class App {
         this.physicsWorld.addBody(body);
 
         const loader = new GLTFLoader();
-        const model = await loader.loadAsync(import.meta.env.BASE_URL + "/gltf/HAZMAT.gltf");
+        const model = await loader.loadAsync(hazmatUrl);
         
         model.scene.scale.set(0.05, 0.05, 0.05);
         model.scene.position.set(15, 10, 8);
@@ -141,6 +144,7 @@ export class App {
         this.scene.add(this.controls.getObject());
 
         const light = new AmbientLight(0x303030);
+
         this.scene.add(light);
 
         const boxm = new BoxManager(this.scene, this.physicsWorld, 0, 0);

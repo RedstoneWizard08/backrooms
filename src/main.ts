@@ -1,3 +1,5 @@
 import { App } from "./game";
 
-new App().run();
+window.addEventListener("load", async () => {
+    await new App().run();
+});

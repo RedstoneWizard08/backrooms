@@ -9,15 +9,17 @@ import {
 
 import { Body, Box, World, Vec3 } from "cannon-es";
 
+import floorUrl from "../../public/textures/backrooms_floor_tex.png?url";
+import wallUrl from "../../public/textures/backrooms_wall_tex.png?url";
+
 export const loader = new TextureLoader();
 
 export let floorTexture: Texture;
 export let wallTexture: Texture;
 
 export const preInit = async () => {
-    floorTexture = await loader.loadAsync(import.meta.env.BASE_URL + "/textures/backrooms_floor_tex.png");
-
-    wallTexture = await loader.loadAsync(import.meta.env.BASE_URL + "/textures/backrooms_wall_tex.png");
+    floorTexture = await loader.loadAsync(floorUrl);
+    wallTexture = await loader.loadAsync(wallUrl);
 
     floorTexture.wrapS = wallTexture.wrapS = RepeatWrapping;
     floorTexture.wrapT = wallTexture.wrapT = RepeatWrapping;
